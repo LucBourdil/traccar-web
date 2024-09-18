@@ -23,6 +23,11 @@ import { useCatch } from '../reactHelper';
 import useQuery from '../common/util/useQuery';
 import useSettingsStyles from './common/useSettingsStyles';
 
+//luc deb
+import { deviceCategoriesVDN } from '../vdn/couleurVDN';
+Object.assign(deviceCategories, deviceCategoriesVDN);
+//Luc fin
+
 const DevicePage = () => {
   const classes = useSettingsStyles();
   const t = useTranslation();

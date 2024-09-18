@@ -52,6 +52,11 @@ export const mapIcons = {
   van: vanSvg,
 };
 
+//luc deb
+import { renderColorVDN , mapIconsVDN} from '../../vdn/couleurVDN';
+Object.assign(mapIcons, mapIconsVDN);
+//luc fin
+
 export const mapIconKey = (category) => (mapIcons.hasOwnProperty(category) ? category : 'default');
 
 export const mapImages = {};
@@ -68,7 +73,7 @@ export default async () => {
     const results = [];
     ['info', 'success', 'error', 'neutral'].forEach((color) => {
       results.push(loadImage(mapIcons[category]).then((icon) => {
-        mapImages[`${category}-${color}`] = prepareIcon(background, icon, mapPalette[color].main);
+        mapImages[`${category}-${color}`] = prepareIcon(background, icon, renderColorVDN(category));
       }));
     });
     await Promise.all(results);

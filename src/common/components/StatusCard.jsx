@@ -24,6 +24,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PendingIcon from '@mui/icons-material/Pending';
 
+//deb luc intervention
+import InterventionIcon from '@mui/icons-material/Sos';
+//fin luc intervention
+
 import { useTranslation } from './LocalizationProvider';
 import RemoveDialog from './RemoveDialog';
 import PositionValue from './PositionValue';
@@ -171,6 +175,54 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
     }
   }, [navigate, position]);
 
+//luc debut intervention
+
+const changerInterventionStatus = useCatch(async () => {
+   
+  //if (1===1)  throw Error(device.contact);
+ 
+  let isIntervention = device.attributes["Intervention"];
+
+  let cloneDevice = { ...device }; 
+
+  cloneDevice.attributes = { ...device.attributes }; 
+
+  cloneDevice.attributes["Intervention"] = ! isIntervention;
+  if (isIntervention) {
+    cloneDevice.category = cloneDevice.category.replace('_Intervention','');
+  } else {
+    cloneDevice.category = cloneDevice.category + '_Intervention';
+  }
+  
+  const response = await fetch(`/api/devices/${deviceId}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    //body: JSON.stringify(item),
+    body: JSON.stringify(cloneDevice),
+  });
+
+  if (response.ok) {
+    //dispatch(devicesActions.refresh(await response.json()));
+    
+    //raffraichissement de l'icône:P
+    const response = await fetch('/api/devices');
+      if (response.ok) {
+        dispatch(devicesActions.refresh(await response.json()));
+      } else {
+        throw Error(await response.text());
+      }
+
+      //alert((isIntervention ? "Fin d'intervention" : "Debut d'intervention") + " pour le véhicule " + device.contact );
+
+      //throw Error(isIntervention ? "Fin d'intervention" : "Debut d'intervention");
+    } else {
+      throw Error(await response.text());
+    }
+});
+
+
+//luc fin intervention
+
   return (
     <>
       <div className={classes.root}>
@@ -259,6 +311,11 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
                   className={classes.delete}
                 >
                   <DeleteIcon />
+                </IconButton>
+                <IconButton
+                  onClick={() => changerInterventionStatus() }
+                >
+                  <InterventionIcon />
                 </IconButton>
               </CardActions>
             </Card>
