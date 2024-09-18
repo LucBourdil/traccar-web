@@ -609,5 +609,32 @@
     "categoryVan": "Van",
     "categoryScooter": "Scooter",
     "maintenanceStart": "Start",
-    "maintenancePeriod": "Period"
+    "maintenancePeriod": "Period",
+
+       
+    "categoryVan_Intervention":  "van_Intervention",
+    "categoryVan_ALI":  "van_ALI",
+    "categoryVan_ALI_Intervention":  "van_ALI_Intervention",
+    "categoryVan_ALP":  "van_ALP",
+    "categoryVan_ALP_Intervention":  "van_ALP_Intervention",
+    "categoryVan_CHA":  "van_CHA",
+    "categoryVan_CHA_Intervention":  "van_CHA_Intervention",
+    "categoryVan_DAU":  "van_DAU",
+    "categoryVan_DAU_Intervention":  "van_DAU_Intervention",
+    "categoryVan_DEL":  "van_DEL",
+    "categoryVan_DEL_Intervention":  "van_DEL_Intervention",
+    "categoryVan_GAI":  "van_GAI",
+    "categoryVan_GAI_Intervention":  "van_GAI_Intervention",
+    "categoryVan_IND":  "van_IND",
+    "categoryVan_IND_Intervention":  "van_IND_Intervention",
+    "categoryVan_QUE":  "van_QUE",
+    "categoryVan_QUE_Intervention":  "van_QUE_Intervention",
+    "categoryVan_REC":  "van_REC",
+    "categoryVan_REC_Intervention":  "van_REC_Intervention",
+    "categoryVan_ROM":  "van_ROM",
+    "categoryVan_ROM_Intervention":  "van_ROM_Intervention",
+    "categoryVan_SAN":  "van_SAN",
+    "categoryVan_SAN_Intervention":  "van_SAN_Intervention",
+    "categoryVan_SIE":  "van_SIE",
+    "categoryVan_SIE_Intervention":  "van_SIE_Intervention" 
 }
