@@ -24,8 +24,9 @@ import useQuery from '../common/util/useQuery';
 import useSettingsStyles from './common/useSettingsStyles';
 
 //luc deb
-import { deviceCategoriesVDN } from '../vdn/couleurVDN';
-Object.assign(deviceCategories, deviceCategoriesVDN);
+import {deviceCategoriesVDN} from '../vdn/couleurVDN';
+//Object.assign(deviceCategories, deviceCategoriesVDN); ne marche pas O_o
+deviceCategories.push(...deviceCategoriesVDN);
 //Luc fin
 
 const DevicePage = () => {
