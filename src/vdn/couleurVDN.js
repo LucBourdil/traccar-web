@@ -25,34 +25,85 @@ export const renderColorVDN = (category) => {
     if  (category === "van_SAN_Intervention") {return "#800000"}
     if  (category === "van_SIE") {return "#f3802b"}
     if  (category === "van_SIE_Intervention") {return "#f3802b"}
+    if  (category === "motorcycle_Intervention") {return "#eeeeee"}
+    if  (category === "motorcycle_ALI") {return "#edda05"}
+    if  (category === "motorcycle_ALI_Intervention") {return "#edda05"}
+    if  (category === "motorcycle_ALP") {return "#0fb813"}
+    if  (category === "motorcycle_ALP_Intervention") {return "#0fb813"}
+    if  (category === "motorcycle_CHA") {return "#000000"}
+    if  (category === "motorcycle_CHA_Intervention") {return "#000000"}
+    if  (category === "motorcycle_DAU") {return "#2addd2"}
+    if  (category === "motorcycle_DAU_Intervention") {return "#2addd2"}
+    if  (category === "motorcycle_DEL") {return "#888888"}
+    if  (category === "motorcycle_DEL_Intervention") {return "#888888"}
+    if  (category === "motorcycle_GAI") {return "#9beda1"}
+    if  (category === "motorcycle_GAI_Intervention") {return "#9beda1"}
+    if  (category === "motorcycle_IND") {return "#ff0000"}
+    if  (category === "motorcycle_IND_Intervention") {return "#ff0000"}
+    if  (category === "motorcycle_QUE") {return "#89c6fa"}
+    if  (category === "motorcycle_QUE_Intervention") {return "#89c6fa"}
+    if  (category === "motorcycle_REC") {return "#CC00CC"}
+    if  (category === "motorcycle_REC_Intervention") {return "#CC00CC"}
+    if  (category === "motorcycle_ROM") {return "#0c0cc4"}
+    if  (category === "motorcycle_ROM_Intervention") {return "#0c0cc4"}
+    if  (category === "motorcycle_SAN") {return "#800000"}
+    if  (category === "motorcycle_SAN_Intervention") {return "#800000"}
+    if  (category === "motorcycle_SIE") {return "#f3802b"}
+    if  (category === "motorcycle_SIE_Intervention") {return "#f3802b"}
     return false;
   };
 
   import van_InterventionSvg from './images/icon/van_Intervention.svg';
-  import van_ALISvg from './images/icon/van_ALI.svg';
-  import van_ALI_InterventionSvg from './images/icon/van_ALI_Intervention.svg';
-  import van_ALPSvg from './images/icon/van_ALP.svg';
-  import van_ALP_InterventionSvg from './images/icon/van_ALP_Intervention.svg';
-  import van_CHASvg from './images/icon/van_CHA.svg';
-  import van_CHA_InterventionSvg from './images/icon/van_CHA_Intervention.svg';
-  import van_DAUSvg from './images/icon/van_DAU.svg';
-  import van_DAU_InterventionSvg from './images/icon/van_DAU_Intervention.svg';
-  import van_DELSvg from './images/icon/van_DEL.svg';
-  import van_DEL_InterventionSvg from './images/icon/van_DEL_Intervention.svg';
-  import van_GAISvg from './images/icon/van_GAI.svg';
-  import van_GAI_InterventionSvg from './images/icon/van_GAI_Intervention.svg';
-  import van_INDSvg from './images/icon/van_IND.svg';
-  import van_IND_InterventionSvg from './images/icon/van_IND_Intervention.svg';
-  import van_QUESvg from './images/icon/van_QUE.svg';
-  import van_QUE_InterventionSvg from './images/icon/van_QUE_Intervention.svg';
-  import van_RECSvg from './images/icon/van_REC.svg';
-  import van_REC_InterventionSvg from './images/icon/van_REC_Intervention.svg';
-  import van_ROMSvg from './images/icon/van_ROM.svg';
-  import van_ROM_InterventionSvg from './images/icon/van_ROM_Intervention.svg';
-  import van_SANSvg from './images/icon/van_SAN.svg';
-  import van_SAN_InterventionSvg from './images/icon/van_SAN_Intervention.svg';
-  import van_SIESvg from './images/icon/van_SIE.svg';
-  import van_SIE_InterventionSvg from './images/icon/van_SIE_Intervention.svg';
+  import van_ALISvg from '../resources/images/icon/van.svg';
+  import van_ALI_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_ALPSvg from '../resources/images/icon/van.svg';
+  import van_ALP_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_CHASvg from '../resources/images/icon/van.svg';
+  import van_CHA_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_DAUSvg from '../resources/images/icon/van.svg';
+  import van_DAU_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_DELSvg from '../resources/images/icon/van.svg';
+  import van_DEL_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_GAISvg from '../resources/images/icon/van.svg';
+  import van_GAI_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_INDSvg from '../resources/images/icon/van.svg';
+  import van_IND_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_QUESvg from '../resources/images/icon/van.svg';
+  import van_QUE_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_RECSvg from '../resources/images/icon/van.svg';
+  import van_REC_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_ROMSvg from '../resources/images/icon/van.svg';
+  import van_ROM_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_SANSvg from '../resources/images/icon/van.svg';
+  import van_SAN_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_SIESvg from '../resources/images/icon/van.svg';
+  import van_SIE_InterventionSvg from './images/icon/van_Intervention.svg';
+  import motorcycle_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_ALISvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_ALI_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_ALPSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_ALP_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_CHASvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_CHA_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_DAUSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_DAU_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_DELSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_DEL_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_GAISvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_GAI_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_INDSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_IND_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_QUESvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_QUE_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_RECSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_REC_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_ROMSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_ROM_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_SANSvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_SAN_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_SIESvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_SIE_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  
 
   export const mapIconsVDN= {
     van_Intervention: van_InterventionSvg,
@@ -79,7 +130,32 @@ export const renderColorVDN = (category) => {
     van_SAN: van_SANSvg,
     van_SAN_Intervention: van_SAN_InterventionSvg,
     van_SIE: van_SIESvg,
-    van_SIE_Intervention: van_SIE_InterventionSvg
+    van_SIE_Intervention: van_SIE_InterventionSvg,
+    motorcycle_Intervention: motorcycle_InterventionSvg,
+    motorcycle_ALI: motorcycle_ALISvg,
+    motorcycle_ALI_Intervention: motorcycle_ALI_InterventionSvg,
+    motorcycle_ALP: motorcycle_ALPSvg,
+    motorcycle_ALP_Intervention: motorcycle_ALP_InterventionSvg,
+    motorcycle_CHA: motorcycle_CHASvg,
+    motorcycle_CHA_Intervention: motorcycle_CHA_InterventionSvg,
+    motorcycle_DAU: motorcycle_DAUSvg,
+    motorcycle_DAU_Intervention: motorcycle_DAU_InterventionSvg,
+    motorcycle_DEL: motorcycle_DELSvg,
+    motorcycle_DEL_Intervention: motorcycle_DEL_InterventionSvg,
+    motorcycle_GAI: motorcycle_GAISvg,
+    motorcycle_GAI_Intervention: motorcycle_GAI_InterventionSvg,
+    motorcycle_IND: motorcycle_INDSvg,
+    motorcycle_IND_Intervention: motorcycle_IND_InterventionSvg,
+    motorcycle_QUE: motorcycle_QUESvg,
+    motorcycle_QUE_Intervention: motorcycle_QUE_InterventionSvg,
+    motorcycle_REC: motorcycle_RECSvg,
+    motorcycle_REC_Intervention: motorcycle_REC_InterventionSvg,
+    motorcycle_ROM: motorcycle_ROMSvg,
+    motorcycle_ROM_Intervention: motorcycle_ROM_InterventionSvg,
+    motorcycle_SAN: motorcycle_SANSvg,
+    motorcycle_SAN_Intervention: motorcycle_SAN_InterventionSvg,
+    motorcycle_SIE: motorcycle_SIESvg,
+    motorcycle_SIE_Intervention: motorcycle_SIE_InterventionSvg,  
   };
 
   export const deviceCategoriesVDN = [
@@ -108,5 +184,30 @@ export const renderColorVDN = (category) => {
     'van_SAN_Intervention',
     'van_SIE',
     'van_SIE_Intervention',
+    'motorcycle_Intervention',
+    'motorcycle_ALI',
+    'motorcycle_ALI_Intervention',
+    'motorcycle_ALP',
+    'motorcycle_ALP_Intervention',
+    'motorcycle_CHA',
+    'motorcycle_CHA_Intervention',
+    'motorcycle_DAU',
+    'motorcycle_DAU_Intervention',
+    'motorcycle_DEL',
+    'motorcycle_DEL_Intervention',
+    'motorcycle_GAI',
+    'motorcycle_GAI_Intervention',
+    'motorcycle_IND',
+    'motorcycle_IND_Intervention',
+    'motorcycle_QUE',
+    'motorcycle_QUE_Intervention',
+    'motorcycle_REC',
+    'motorcycle_REC_Intervention',
+    'motorcycle_ROM',
+    'motorcycle_ROM_Intervention',
+    'motorcycle_SAN',
+    'motorcycle_SAN_Intervention',
+    'motorcycle_SIE',
+    'motorcycle_SIE_Intervention',
   ];
   //fin luc

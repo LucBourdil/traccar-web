@@ -636,5 +636,32 @@
     "categoryVan_SAN":  "van_SAN",
     "categoryVan_SAN_Intervention":  "van_SAN_Intervention",
     "categoryVan_SIE":  "van_SIE",
-    "categoryVan_SIE_Intervention":  "van_SIE_Intervention" 
+    "categoryVan_SIE_Intervention":  "van_SIE_Intervention",
+
+    "categoryMotorcycle_Intervention":  "moto_Intervention",
+    "categoryMotorcycle_ALI":  "moto_ALI",
+    "categoryMotorcycle_ALI_Intervention":  "moto_ALI_Intervention",
+    "categoryMotorcycle_ALP":  "moto_ALP",
+    "categoryMotorcycle_ALP_Intervention":  "moto_ALP_Intervention",
+    "categoryMotorcycle_CHA":  "moto_CHA",
+    "categoryMotorcycle_CHA_Intervention":  "moto_CHA_Intervention",
+    "categoryMotorcycle_DAU":  "moto_DAU",
+    "categoryMotorcycle_DAU_Intervention":  "moto_DAU_Intervention",
+    "categoryMotorcycle_DEL":  "moto_DEL",
+    "categoryMotorcycle_DEL_Intervention":  "moto_DEL_Intervention",
+    "categoryMotorcycle_GAI":  "moto_GAI",
+    "categoryMotorcycle_GAI_Intervention":  "moto_GAI_Intervention",
+    "categoryMotorcycle_IND":  "moto_IND",
+    "categoryMotorcycle_IND_Intervention":  "moto_IND_Intervention",
+    "categoryMotorcycle_QUE":  "moto_QUE",
+    "categoryMotorcycle_QUE_Intervention":  "moto_QUE_Intervention",
+    "categoryMotorcycle_REC":  "moto_REC",
+    "categoryMotorcycle_REC_Intervention":  "moto_REC_Intervention",
+    "categoryMotorcycle_ROM":  "moto_ROM",
+    "categoryMotorcycle_ROM_Intervention":  "moto_ROM_Intervention",
+    "categoryMotorcycle_SAN":  "moto_SAN",
+    "categoryMotorcycle_SAN_Intervention":  "moto_SAN_Intervention",
+    "categoryMotorcycle_SIE":  "moto_SIE",
+    "categoryMotorcycle_SIE_Intervention":  "moto_SIE_Intervention"
+ 
 }
