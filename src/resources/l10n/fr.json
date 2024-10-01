@@ -636,6 +636,8 @@
     "categoryVan_SAN_Intervention":  "Van_SAN_Intervention",
     "categoryVan_SIE":  "Van_SIE",
     "categoryVan_SIE_Intervention":  "Van_SIE_Intervention" ,
+    "categoryVan_BRA":  "Van_BRA",
+    "categoryVan_BRA_Intervention":  "Van_BRA_Intervention" ,
 
     "categoryMotorcycle_Intervention":  "Moto_Intervention",
     "categoryMotorcycle_ALI":  "Moto_ALI",
@@ -661,6 +663,8 @@
     "categoryMotorcycle_SAN":  "Moto_SAN",
     "categoryMotorcycle_SAN_Intervention":  "Moto_SAN_Intervention",
     "categoryMotorcycle_SIE":  "Moto_SIE",
-    "categoryMotorcycle_SIE_Intervention":  "Moto_SIE_Intervention"
+    "categoryMotorcycle_SIE_Intervention":  "Moto_SIE_Intervention",
+    "categoryMotorcycle_BRA":  "Moto_BRA",
+    "categoryMotorcycle_BRA_Intervention":  "Moto_BRA_Intervention"
 
 }
