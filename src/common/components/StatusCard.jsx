@@ -37,6 +37,11 @@ import { devicesActions } from '../../store';
 import { useCatch, useCatchCallback } from '../../reactHelper';
 import { useAttributePreference } from '../util/preferences';
 
+//deb luc authentification service SOS
+import { serviceAPI, serviceAPIpassword } from '../../vdn/couleurVDN';
+//fin luc
+
+
 const useStyles = makeStyles((theme) => ({
   card: {
     pointerEvents: 'auto',
@@ -194,9 +199,15 @@ const changerInterventionStatus = useCatch(async () => {
     cloneDevice.category = cloneDevice.category + '_Intervention';
   }
   
+  // Encodez les identifiants en base64
+  const credentials = btoa(`${serviceAPI}:${serviceAPIpassword}`);
+  
   const response = await fetch(`/api/devices/${deviceId}`, {
     method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${credentials}`
+     },
     //body: JSON.stringify(item),
     body: JSON.stringify(cloneDevice),
   });
