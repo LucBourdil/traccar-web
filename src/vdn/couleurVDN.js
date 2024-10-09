@@ -1,4 +1,9 @@
 //deb luc
+
+export const serviceAPI="serviceAPI@gmail.com"
+export const serviceAPIpassword="9SV4Ty6rL94hUF48mZv628hJwjmgMq8T"
+
+
 export const renderColorVDN = (category) => {
     if  (category === "van_Intervention") {return "#eeeeee"}
     if  (category === "van_ALI") {return "#edda05"}
