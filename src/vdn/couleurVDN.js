@@ -25,6 +25,8 @@ export const renderColorVDN = (category) => {
     if  (category === "van_SAN_Intervention") {return "#800000"}
     if  (category === "van_SIE") {return "#f3802b"}
     if  (category === "van_SIE_Intervention") {return "#f3802b"}
+    if  (category === "van_BRA") {return "#000000"}
+    if  (category === "van_BRA_Intervention") {return "#000000"}
     if  (category === "motorcycle_Intervention") {return "#eeeeee"}
     if  (category === "motorcycle_ALI") {return "#edda05"}
     if  (category === "motorcycle_ALI_Intervention") {return "#edda05"}
@@ -58,6 +60,8 @@ export const renderColorVDN = (category) => {
   import van_ALI_InterventionSvg from './images/icon/van_Intervention.svg';
   import van_ALPSvg from '../resources/images/icon/van.svg';
   import van_ALP_InterventionSvg from './images/icon/van_Intervention.svg';
+  import van_BRASvg from '../resources/images/icon/van.svg';
+  import van_BRA_InterventionSvg from './images/icon/van_Intervention.svg';
   import van_CHASvg from '../resources/images/icon/van.svg';
   import van_CHA_InterventionSvg from './images/icon/van_Intervention.svg';
   import van_DAUSvg from '../resources/images/icon/van.svg';
@@ -83,6 +87,8 @@ export const renderColorVDN = (category) => {
   import motorcycle_ALI_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
   import motorcycle_ALPSvg from '../resources/images/icon/motorcycle.svg';
   import motorcycle_ALP_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import motorcycle_BRASvg from '../resources/images/icon/motorcycle.svg';
+  import motorcycle_BRA_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
   import motorcycle_CHASvg from '../resources/images/icon/motorcycle.svg';
   import motorcycle_CHA_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
   import motorcycle_DAUSvg from '../resources/images/icon/motorcycle.svg';
@@ -111,6 +117,8 @@ export const renderColorVDN = (category) => {
     van_ALI_Intervention: van_ALI_InterventionSvg,
     van_ALP: van_ALPSvg,
     van_ALP_Intervention: van_ALP_InterventionSvg,
+    van_BRA: van_BRASvg,
+    van_BRA_Intervention: van_BRA_InterventionSvg,
     van_CHA: van_CHASvg,
     van_CHA_Intervention: van_CHA_InterventionSvg,
     van_DAU: van_DAUSvg,
@@ -136,6 +144,8 @@ export const renderColorVDN = (category) => {
     motorcycle_ALI_Intervention: motorcycle_ALI_InterventionSvg,
     motorcycle_ALP: motorcycle_ALPSvg,
     motorcycle_ALP_Intervention: motorcycle_ALP_InterventionSvg,
+    motorcycle_BRA: motorcycle_BRASvg,
+    motorcycle_BRA_Intervention: motorcycle_BRA_InterventionSvg,
     motorcycle_CHA: motorcycle_CHASvg,
     motorcycle_CHA_Intervention: motorcycle_CHA_InterventionSvg,
     motorcycle_DAU: motorcycle_DAUSvg,
@@ -155,7 +165,7 @@ export const renderColorVDN = (category) => {
     motorcycle_SAN: motorcycle_SANSvg,
     motorcycle_SAN_Intervention: motorcycle_SAN_InterventionSvg,
     motorcycle_SIE: motorcycle_SIESvg,
-    motorcycle_SIE_Intervention: motorcycle_SIE_InterventionSvg,  
+    motorcycle_SIE_Intervention: motorcycle_SIE_InterventionSvg,    
   };
 
   export const deviceCategoriesVDN = [
@@ -164,6 +174,8 @@ export const renderColorVDN = (category) => {
     'van_ALI_Intervention',
     'van_ALP',
     'van_ALP_Intervention',
+    'van_BRA',
+    'van_BRA_Intervention',
     'van_CHA',
     'van_CHA_Intervention',
     'van_DAU',
@@ -189,6 +201,8 @@ export const renderColorVDN = (category) => {
     'motorcycle_ALI_Intervention',
     'motorcycle_ALP',
     'motorcycle_ALP_Intervention',
+    'motorcycle_BRA',
+    'motorcycle_BRA_Intervention',
     'motorcycle_CHA',
     'motorcycle_CHA_Intervention',
     'motorcycle_DAU',
@@ -209,5 +223,6 @@ export const renderColorVDN = (category) => {
     'motorcycle_SAN_Intervention',
     'motorcycle_SIE',
     'motorcycle_SIE_Intervention',
+    
   ];
   //fin luc
