@@ -24,6 +24,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PendingIcon from '@mui/icons-material/Pending';
 
+//deb luc intervention
+import InterventionIcon from '@mui/icons-material/Sos';
+//fin luc intervention
+
 import { useTranslation } from './LocalizationProvider';
 import RemoveDialog from './RemoveDialog';
 import PositionValue from './PositionValue';
@@ -32,6 +36,11 @@ import usePositionAttributes from '../attributes/usePositionAttributes';
 import { devicesActions } from '../../store';
 import { useCatch, useCatchCallback } from '../../reactHelper';
 import { useAttributePreference } from '../util/preferences';
+
+//deb luc authentification service SOS
+import { serviceAPI, serviceAPIpassword } from '../../vdn/couleurVDN';
+//fin luc
+
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -59,9 +68,6 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(1),
     maxHeight: theme.dimensions.cardContentMaxHeight,
     overflow: 'auto',
-  },
-  delete: {
-    color: theme.palette.error.main,
   },
   icon: {
     width: '25px',
@@ -129,6 +135,9 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
   const positionAttributes = usePositionAttributes(t);
   const positionItems = useAttributePreference('positionItems', 'fixTime,address,speed,totalDistance');
 
+  const navigationAppLink = useAttributePreference('navigationAppLink');
+  const navigationAppTitle = useAttributePreference('navigationAppTitle');
+
   const [anchorEl, setAnchorEl] = useState(null);
 
   const [removing, setRemoving] = useState(false);
@@ -170,6 +179,60 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
       throw Error(await response.text());
     }
   }, [navigate, position]);
+
+//luc debut intervention
+
+const changerInterventionStatus = useCatch(async () => {
+   
+  //if (1===1)  throw Error(device.contact);
+ 
+  let isIntervention = device.attributes["Intervention"];
+
+  let cloneDevice = { ...device }; 
+
+  cloneDevice.attributes = { ...device.attributes }; 
+
+  cloneDevice.attributes["Intervention"] = ! isIntervention;
+  if (isIntervention) {
+    cloneDevice.category = cloneDevice.category.replace('_Intervention','');
+  } else {
+    cloneDevice.category = cloneDevice.category + '_Intervention';
+  }
+  
+  // Encodez les identifiants en base64
+  const credentials = btoa(`${serviceAPI}:${serviceAPIpassword}`);
+  
+  const response = await fetch(`/api/devices/${deviceId}`, {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Authorization': `Basic ${credentials}`
+     },
+    //body: JSON.stringify(item),
+    body: JSON.stringify(cloneDevice),
+  });
+
+  if (response.ok) {
+    //dispatch(devicesActions.refresh(await response.json()));
+    
+    //raffraichissement de l'icône:P
+    const response = await fetch('/api/devices');
+      if (response.ok) {
+        dispatch(devicesActions.refresh(await response.json()));
+      } else {
+        throw Error(await response.text());
+      }
+
+      //alert((isIntervention ? "Fin d'intervention" : "Debut d'intervention") + " pour le véhicule " + device.contact );
+
+      //throw Error(isIntervention ? "Fin d'intervention" : "Debut d'intervention");
+    } else {
+      throw Error(await response.text());
+    }
+});
+
+
+//luc fin intervention
 
   return (
     <>
@@ -254,11 +317,16 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
                   <EditIcon />
                 </IconButton>
                 <IconButton
+                  color="error"
                   onClick={() => setRemoving(true)}
                   disabled={disableActions || deviceReadonly}
-                  className={classes.delete}
                 >
                   <DeleteIcon />
+                </IconButton>
+                <IconButton
+                  onClick={() => changerInterventionStatus() }
+                >
+                  <InterventionIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -272,6 +340,7 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
           <MenuItem component="a" target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${position.latitude}%2C${position.longitude}`}>{t('linkGoogleMaps')}</MenuItem>
           <MenuItem component="a" target="_blank" href={`http://maps.apple.com/?ll=${position.latitude},${position.longitude}`}>{t('linkAppleMaps')}</MenuItem>
           <MenuItem component="a" target="_blank" href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${position.latitude}%2C${position.longitude}&heading=${position.course}`}>{t('linkStreetView')}</MenuItem>
+          {navigationAppTitle && <MenuItem component="a" target="_blank" href={navigationAppLink.replace('{latitude}', position.latitude).replace('{longitude}', position.longitude)}>{navigationAppTitle}</MenuItem>}
           {!shareDisabled && !user.temporary && <MenuItem onClick={() => navigate(`/settings/device/${deviceId}/share`)}>{t('deviceShare')}</MenuItem>}
         </Menu>
       )}

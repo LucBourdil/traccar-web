@@ -23,6 +23,10 @@ import { useAdministrator } from '../common/util/permissions';
 import EngineIcon from '../resources/images/data/engine.svg?react';
 import { useAttributePreference } from '../common/util/preferences';
 
+//deb luc
+import { renderColorVDN } from '../vdn/couleurVDN';
+//fin luc
+
 dayjs.extend(relativeTime);
 
 const useStyles = makeStyles((theme) => ({
@@ -86,7 +90,7 @@ const DeviceRow = ({ data, index, style }) => {
         disabled={!admin && item.disabled}
       >
         <ListItemAvatar>
-          <Avatar>
+        <Avatar style={{ background: renderColorVDN(item.category) }}>
             <img className={classes.icon} src={mapIcons[mapIconKey(item.category)]} alt="" />
           </Avatar>
         </ListItemAvatar>
