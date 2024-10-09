@@ -69,9 +69,6 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: theme.dimensions.cardContentMaxHeight,
     overflow: 'auto',
   },
-  delete: {
-    color: theme.palette.error.main,
-  },
   icon: {
     width: '25px',
     height: '25px',
@@ -137,6 +134,9 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
 
   const positionAttributes = usePositionAttributes(t);
   const positionItems = useAttributePreference('positionItems', 'fixTime,address,speed,totalDistance');
+
+  const navigationAppLink = useAttributePreference('navigationAppLink');
+  const navigationAppTitle = useAttributePreference('navigationAppTitle');
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -317,9 +317,9 @@ const changerInterventionStatus = useCatch(async () => {
                   <EditIcon />
                 </IconButton>
                 <IconButton
+                  color="error"
                   onClick={() => setRemoving(true)}
                   disabled={disableActions || deviceReadonly}
-                  className={classes.delete}
                 >
                   <DeleteIcon />
                 </IconButton>
@@ -340,6 +340,7 @@ const changerInterventionStatus = useCatch(async () => {
           <MenuItem component="a" target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${position.latitude}%2C${position.longitude}`}>{t('linkGoogleMaps')}</MenuItem>
           <MenuItem component="a" target="_blank" href={`http://maps.apple.com/?ll=${position.latitude},${position.longitude}`}>{t('linkAppleMaps')}</MenuItem>
           <MenuItem component="a" target="_blank" href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${position.latitude}%2C${position.longitude}&heading=${position.course}`}>{t('linkStreetView')}</MenuItem>
+          {navigationAppTitle && <MenuItem component="a" target="_blank" href={navigationAppLink.replace('{latitude}', position.latitude).replace('{longitude}', position.longitude)}>{navigationAppTitle}</MenuItem>}
           {!shareDisabled && !user.temporary && <MenuItem onClick={() => navigate(`/settings/device/${deviceId}/share`)}>{t('deviceShare')}</MenuItem>}
         </Menu>
       )}
