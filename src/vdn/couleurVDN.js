@@ -5,6 +5,8 @@ export const renderColorVDN = (category) => {
     if  (category === "van_ALI_Intervention") {return "#edda05"}
     if  (category === "van_ALP") {return "#0fb813"}
     if  (category === "van_ALP_Intervention") {return "#0fb813"}
+    if  (category === "van_BRA") {return "#000000"}
+    if  (category === "van_BRA_Intervention") {return "#000000"}
     if  (category === "van_CHA") {return "#000000"}
     if  (category === "van_CHA_Intervention") {return "#000000"}
     if  (category === "van_DAU") {return "#2addd2"}
@@ -25,13 +27,13 @@ export const renderColorVDN = (category) => {
     if  (category === "van_SAN_Intervention") {return "#800000"}
     if  (category === "van_SIE") {return "#f3802b"}
     if  (category === "van_SIE_Intervention") {return "#f3802b"}
-    if  (category === "van_BRA") {return "#000000"}
-    if  (category === "van_BRA_Intervention") {return "#000000"}
     if  (category === "motorcycle_Intervention") {return "#eeeeee"}
     if  (category === "motorcycle_ALI") {return "#edda05"}
     if  (category === "motorcycle_ALI_Intervention") {return "#edda05"}
     if  (category === "motorcycle_ALP") {return "#0fb813"}
     if  (category === "motorcycle_ALP_Intervention") {return "#0fb813"}
+    if  (category === "motorcycle_BRA") {return "#000000"}
+    if  (category === "motorcycle_BRA_Intervention") {return "#000000"}
     if  (category === "motorcycle_CHA") {return "#000000"}
     if  (category === "motorcycle_CHA_Intervention") {return "#000000"}
     if  (category === "motorcycle_DAU") {return "#2addd2"}
